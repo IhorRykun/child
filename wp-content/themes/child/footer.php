@@ -109,7 +109,6 @@
                     <div class="col-lg-3">
                         <div class="footer__logo">
                            <?php the_custom_logo(); ?>
-                            <div class="footer__logo-text">мир детства</div>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-3">
@@ -141,8 +140,8 @@
                             <div class="footer__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/phone.svg" alt="телефон" class="footer__contacts-logo">
                                 <div class="footer__contacts-tel">
-                                    <a href="tel:+797867834347">+797867834347</a>
-                                    <a href="tel:+797867834358">+797867834358</a>
+                                  <a href= "tel:"<?php the_field("tel_one", 2) ?> class="header__contacts-mail"><?php the_field("tel_one", 2) ?></a>
+                                  <a href="tel:"<?php the_field("tel_two", 2) ?> class="header__contacts-mail"><?php the_field("tel_two", 2) ?></a>
                                 </div>
                             </div>
                             <div class="footer__contacts-item">
