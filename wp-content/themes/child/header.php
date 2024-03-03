@@ -50,7 +50,7 @@ echo $image[0]; ?>" alt="Мир детства" >
                         <div class="header__contacts">
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/email.svg" alt="почта" class="header__contacts-logo">
-                                <a href=<?php the_field("Email", 2) ?> class="header__contacts-mail"><?php the_field("Email", 2) ?></a>
+                                <a href="mailto:"<?php the_field("Email", 2) ?> class="header__contacts-mail"><?php the_field("Email", 2) ?></a>
                             </div>
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/phone.svg" alt="телефон" class="header__contacts-logo">
@@ -61,8 +61,7 @@ echo $image[0]; ?>" alt="Мир детства" >
                             </div>
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/pointer.svg" alt="указатель" class="header__contacts-logo">
-                                <address>ул. Василисы Кожиной, 1<br>
-                                    Москва, Россия, 121096</address>
+                                <address><?php the_field("adressa")?></address>
                             </div>
                         </div>
                     </div>
@@ -70,19 +69,19 @@ echo $image[0]; ?>" alt="Мир детства" >
                 <nav class="row" data-slide="1">
                     <ul class="header__nav">
                         <li>
-                            <a class="header__nav-item" href="#about">Про компанию</a>
+                            <a class="header__nav-item" href="#about"><?php the_field("pro_kompaniyu")?></a>
                         </li>
                         <li>
-                            <a class="header__nav-item" href="#specialists">Наша команда</a>
+                            <a class="header__nav-item" href="#specialists"><?php the_field("nasha_komanda")?></a>
                         </li>
                         <li>
-                            <a class="header__nav-item" href="#toys">Игрушки</a>
+                            <a class="header__nav-item" href="#toys"><?php the_field("igrushki") ?></a>
                         </li>
                         <li>
-                            <a class="header__nav-item" href="#aboutus">Наша история</a>
+                            <a class="header__nav-item" href="#aboutus"><?php the_field("nasha_istoriya")?></a>
                         </li>
                         <li>
-                            <a class="header__nav-item" href="#contacts">Контакты и отзывы</a>
+                            <a class="header__nav-item" href="#contacts"><?php the_field("kontakty_i_otzyvy")?></a>
                         </li>
                     </ul>
                 </nav>
