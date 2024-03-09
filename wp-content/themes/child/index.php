@@ -85,52 +85,8 @@ wp_reset_postdata(); // сброс
             </div>
         </div>
 
-        <div class="about" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1 col-lg-5 offset-lg-1">
-                        <div class="about__img">
-                         <!--  всавка через силку зображення -->
-                            <!-- <img src="<?php the_field("about_img") ?> " alt="про компанию"> -->
-
-
-                            <!-- вставка через масив зображень -->
-                       <?php
-                          $image = get_field("about_img");
-
-                         if(!empty($image)); ?>
-              <img 
-              src="<?php echo $image['url'];?>" 
-              alt="<?php echo $image['alt'];?>"> 
-                      <?php 
-                 
-                         print_r($image)
-                       ?>
-
-                        </div>
-                    </div>
-                    <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 offset-xl-1">
-                        <h1 class="title underlined"><?php the_field('about_title') ?></h1>
-                        <div class="about__text">
-                       <?php
-                       the_field("about_descr");
-                                                          ?>
-                        </div>
-                        <a href="#" class="button">Узнать больше</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="specialists" id="specialists">
-            <div class="container">
-                <div class="title"><?php the_field("team_title") ?></div>
-                <div class="row">
-                            <img class="specialists__img" src="<?php the_field("team_img") ?> " alt="наша команда">
-                    
-                </div>
-            </div>
-        </div>
-
+       
+       
         <div class="toys" id="toys">
             <div class="container">
                 <h2 class="subtitle">Мягкие игрушки</h2>
@@ -223,7 +179,6 @@ else {
 
 wp_reset_postdata(); // сброс
                 ?>
-                    
 
                 </div>
                 <div class="row">
@@ -236,52 +191,7 @@ wp_reset_postdata(); // сброс
             </div>
         </div>
 
-        <div class="aboutus" id="aboutus">
-            <div class="container">
-                <h1 class="title"><?php  the_field("title_history")?></h1>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="subtitle">
-                        <?php the_field("title_block_history") ?>
-                        </div>
-                        <div class="aboutus__text">
-                            <?php  the_field("text_block_history") ?>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php the_field("history_img") ?>" alt="мир детства">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php the_field("history_img_2") ?>" alt="мир детства">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="subtitle">
-                     <?php  the_field("title_block_history_2")?>
-                        </div>
-                        <div class="aboutus__text">
-                           <?php the_field("text_block_history_2")?>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="subtitle">
-                        <?php the_field("title_block_history_3")?>
-                        </div>
-                        <div class="aboutus__text">
-                          <?php the_field("text_block_history_3") ?>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php the_field("history_img_3") ?>" alt="мир детства">
-                    </div>
-                </div>
-            </div>
-        </div>
+     
 
         <div class="contacts" id="contacts">
             <h1 class="title"><?php the_field("section_serch_title") ?></h1>
@@ -293,8 +203,9 @@ wp_reset_postdata(); // сброс
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div id="map" class="contacts__map">
-                         <?php the_field("section_serch_img") ?>
+                        <div class="contacts__map">
+                         <?php  echo do_shortcode('[wpgmza id="1"]')?>
+                         <!-- <?php the_field("section_serch_img") ?> -->
                         </div>
                     </div>
                 </div>
