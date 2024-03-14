@@ -67,23 +67,19 @@ echo $image[0]; ?>" alt="Мир детства" >
                     </div>
                 </div>
                 <nav class="row" data-slide="1">
-                    <ul class="header__nav">
-                        <li>
-                            <a class="header__nav-item" href="#about"><?php the_field("pro_kompaniyu")?></a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#specialists"><?php the_field("nasha_komanda")?></a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#toys"><?php the_field("igrushki") ?></a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#aboutus"><?php the_field("nasha_istoriya")?></a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#contacts"><?php the_field("kontakty_i_otzyvy")?></a>
-                        </li>
-                    </ul>
+
+                <?php 
+                wp_nav_menu( [
+	'menu'            => 'main',
+	'container'       => false,
+	'menu_class'      => 'header__nav',
+	'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+	'items_wrap'      => '<ul class="header__nav">%3$s</ul>',
+	'depth'           => 1
+] );
+                ?>
+                   
                 </nav>
             </div>
             <div class="header__hamburger">
