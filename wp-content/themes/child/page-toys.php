@@ -43,7 +43,7 @@ else {
                             <div class="toys__item-descr">
                              <?php the_field("toys_about")         ?>         
                             </div>
-                            <div class="minibutton toys__trigger">Подробнее</div>
+                             <a href="<?php echo get_permalink(); ?>" class="minibutton toys__trigger">Подробніше</a>
                         </div>
                     </div>
  <?php
@@ -89,7 +89,7 @@ else {
                             <div class="toys__item-descr">
                                <?php the_field("toys_about") ?>
                             </div>
-                            <div class="minibutton toys__trigger">Подробнее</div>
+                            <a href="<?php echo get_permalink(); ?>" class="minibutton toys__trigger">Подробніше</a>
                         </div>
                        </div>
   <?php
